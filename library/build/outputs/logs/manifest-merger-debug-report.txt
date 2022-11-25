@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml:1:1-37
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml:1:1-37
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml:1:1-37
+	package
+		ADDED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml:1:11-34
+		INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml:1:1-37
+uses-sdk
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+		ADDED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+		ADDED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\DEMO\library\src\main\AndroidManifest.xml
