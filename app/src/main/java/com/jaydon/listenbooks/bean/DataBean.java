@@ -84,16 +84,16 @@ public class DataBean {
                     for (Element img :
                             imgs) {
                         Log.d(StaticValue.TAGS, img.attr("src"));
-                        if (img.attr("src").contains("banner")) {
-                            Log.d(StaticValue.TAGS, "轮播图地址：" + StaticValue.HOME_URL_LIUYUETINGSHU + img.attr("src"));
-                            list.add(new DataBean(StaticValue.HOME_URL_LIUYUETINGSHU + img.attr("src"), null, 1));
-                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }.start();
+        list.add(new DataBean("http://www.6yueting.com/img/banner/1.png", null, 1));
+        list.add(new DataBean("http://www.6yueting.com/img/banner/2.jpg", null, 1));
+        list.add(new DataBean("http://www.6yueting.com/img/banner/4.jpg", null, 1));
+        list.add(new DataBean("http://www.6yueting.com/img/banner/5.jpg", null, 1));
         return list;
     }
 

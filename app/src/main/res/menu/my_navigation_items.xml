@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/action_search"
-        android:icon="@drawable/ic_add"
+        android:icon="@mipmap/home"
         android:title="@string/menu_search" />
     <item
         android:id="@+id/action_settings"
-        android:icon="@drawable/ic_add"
+        android:icon="@mipmap/fenlei"
         android:title="@string/menu_settings" />
     <item
         android:id="@+id/action_navigation"
-        android:icon="@drawable/ic_add"
+        android:icon="@mipmap/me"
         android:title="@string/menu_navigation" />
 </menu>
