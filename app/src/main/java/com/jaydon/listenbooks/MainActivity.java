@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.listenbooks.R;
 import com.jaydon.listenbooks.adapter.MyViewPageAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 

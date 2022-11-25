@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.listenbooks.R;
+import com.jaydon.listenbooks.R;
 import com.jaydon.listenbooks.bean.DataBean;
 import com.jaydon.listenbooks.utils.StaticValue;
 import com.youth.banner.Banner;

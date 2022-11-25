@@ -4,6 +4,7 @@
     <string name="menu_settings">分类</string>
     <string name="menu_navigation">我的</string>
     <string name="onefragment_margin">15</string>
+    <string name="splash_text">老李讲故事</string>
 
     <string name="http_unknown_error">请求出错，未知错误</string>
     <string name="http_token_error">登录失效，请重新登录</string>
