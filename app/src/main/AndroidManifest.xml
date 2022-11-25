@@ -38,6 +38,9 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/TranslucentStatusAppTheme" />
+        <activity
+            android:name=".activity.GirlActivity"
+            android:theme="@style/TranslucentStatusAppTheme" />
 
     </application>
 

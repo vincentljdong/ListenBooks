@@ -1,10 +1,16 @@
 package com.jaydon.listenbooks.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -15,8 +21,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.jaydon.listenbooks.R;
+import com.jaydon.listenbooks.activity.GirlActivity;
 import com.jaydon.listenbooks.bean.DataBean;
 import com.jaydon.listenbooks.utils.StaticValue;
+import com.jaydon.listenbooks.utils.Tools;
 import com.youth.banner.Banner;
 import com.youth.banner.adapter.BannerImageAdapter;
 import com.youth.banner.holder.BannerImageHolder;
@@ -31,8 +39,43 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 public class OneFragment extends Fragment implements View.OnClickListener {
+    private LinearLayout searchLl;
+    private ImageView homeMore;
+    private EditText homeEt;
+    private ImageView homeShare;
     private Banner banner;
-
+    private RoundLinesIndicator indicator;
+    private LinearLayout llGirlOne;
+    private LinearLayout llGirlTwo;
+    private LinearLayout llGirlThree;
+    private LinearLayout llGirlFore;
+    private Button btGirlMore;
+    private Button btGirlChange;
+    private LinearLayout llBoyOne;
+    private LinearLayout llBoyTwo;
+    private LinearLayout llBoyThree;
+    private LinearLayout llBoyOneFore;
+    private Button btBoyMore;
+    private Button btBoyChange;
+    private LinearLayout llTaoluOne;
+    private LinearLayout llTaoluTwo;
+    private LinearLayout llTaoluThree;
+    private LinearLayout llTaoluFore;
+    private Button btTaoluMore;
+    private Button btTaoluChange;
+    private LinearLayout llFaceOne;
+    private LinearLayout llFaceTwo;
+    private LinearLayout llFaceThree;
+    private LinearLayout llFaceFore;
+    private Button btFaceMore;
+    private Button btFaceChange;
+    private LinearLayout llAOne;
+    private LinearLayout llATwo;
+    private LinearLayout llAThree;
+    private LinearLayout llAFore;
+    private Button btAMore;
+    private Button btAChange;
+    Intent intent;
 
     @Nullable
     @Override
@@ -45,8 +88,19 @@ public class OneFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initListener(View view) {
-//        jisuan_bt.setOnClickListener(this);
-//        xiangqing_bt.setOnClickListener(this);
+        homeEt.setOnClickListener(this);
+        homeShare.setOnClickListener(this);
+        btGirlMore.setOnClickListener(this);
+        btGirlChange.setOnClickListener(this);
+        btBoyMore.setOnClickListener(this);
+        btBoyChange.setOnClickListener(this);
+        btTaoluMore.setOnClickListener(this);
+        btTaoluChange.setOnClickListener(this);
+        btFaceMore.setOnClickListener(this);
+        btFaceChange.setOnClickListener(this);
+        btAMore.setOnClickListener(this);
+        btAChange.setOnClickListener(this);
+        llGirlOne.setOnClickListener(this);
     }
 
     private void initData(View view) {
@@ -95,29 +149,90 @@ public class OneFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initView(View view) {
-
+        searchLl = (LinearLayout) view.findViewById(R.id.search_ll);
+        homeMore = (ImageView) view.findViewById(R.id.home_more);
+        homeEt = (EditText) view.findViewById(R.id.home_et);
+        homeShare = (ImageView) view.findViewById(R.id.home_share);
+        indicator = (RoundLinesIndicator) view.findViewById(R.id.indicator);
+        llGirlOne = (LinearLayout) view.findViewById(R.id.ll_girl_one);
+        llGirlTwo = (LinearLayout) view.findViewById(R.id.ll_girl_two);
+        llGirlThree = (LinearLayout) view.findViewById(R.id.ll_girl_three);
+        llGirlFore = (LinearLayout) view.findViewById(R.id.ll_girl_fore);
+        btGirlMore = (Button) view.findViewById(R.id.bt_girl_more);
+        btGirlChange = (Button) view.findViewById(R.id.bt_girl_change);
+        llBoyOne = (LinearLayout) view.findViewById(R.id.ll_boy_one);
+        llBoyTwo = (LinearLayout) view.findViewById(R.id.ll_boy_two);
+        llBoyThree = (LinearLayout) view.findViewById(R.id.ll_boy_three);
+        llBoyOneFore = (LinearLayout) view.findViewById(R.id.ll_boy_one_fore);
+        btBoyMore = (Button) view.findViewById(R.id.bt_boy_more);
+        btBoyChange = (Button) view.findViewById(R.id.bt_boy_change);
+        llTaoluOne = (LinearLayout) view.findViewById(R.id.ll_taolu_one);
+        llTaoluTwo = (LinearLayout) view.findViewById(R.id.ll_taolu_two);
+        llTaoluThree = (LinearLayout) view.findViewById(R.id.ll_taolu_three);
+        llTaoluFore = (LinearLayout) view.findViewById(R.id.ll_taolu_fore);
+        btTaoluMore = (Button) view.findViewById(R.id.bt_taolu_more);
+        btTaoluChange = (Button) view.findViewById(R.id.bt_taolu_change);
+        llFaceOne = (LinearLayout) view.findViewById(R.id.ll_face_one);
+        llFaceTwo = (LinearLayout) view.findViewById(R.id.ll_face_two);
+        llFaceThree = (LinearLayout) view.findViewById(R.id.ll_face_three);
+        llFaceFore = (LinearLayout) view.findViewById(R.id.ll_face_fore);
+        btFaceMore = (Button) view.findViewById(R.id.bt_face_more);
+        btFaceChange = (Button) view.findViewById(R.id.bt_face_change);
+        llAOne = (LinearLayout) view.findViewById(R.id.ll_A_one);
+        llATwo = (LinearLayout) view.findViewById(R.id.ll_A_two);
+        llAThree = (LinearLayout) view.findViewById(R.id.ll_A_three);
+        llAFore = (LinearLayout) view.findViewById(R.id.ll_A_fore);
+        btAMore = (Button) view.findViewById(R.id.bt_A_more);
+        btAChange = (Button) view.findViewById(R.id.bt_A_change);
         banner = view.findViewById(R.id.banner);
     }
 
     @Override
     public void onClick(View v) {
-//        switch (v.getId()) {
-//            case R.id.jisuan_bt:
-//                if (chengbenjia.getText().length() != 0 && chigushu.getText().length() != 0 && bucangjia.getText().length() != 0 && bucangshu.getText().length() != 0) {
-//                    Double bucangchenben = ((Double.parseDouble(chengbenjia.getText().toString()) * Double.parseDouble(chigushu.getText().toString())) + (Double.parseDouble(bucangjia.getText().toString())) * (Double.parseDouble(bucangshu.getText().toString()))) / (Double.parseDouble(chigushu.getText().toString()) + (Double.parseDouble(bucangshu.getText().toString())));
-//                    zuizhongchengben.setText(bucangchenben.toString());
-//                    Double zuizhongchigushu = (Double.parseDouble(chigushu.getText().toString()) + (Double.parseDouble(bucangshu.getText().toString())));
-//                    zuizhongshuliang.setText(zuizhongchigushu.toString());
-//                } else {
-//                    Toast.makeText(v.getContext(), "不能为空哦！", Toast.LENGTH_LONG).show();
-//                }
-//                break;
-//            case R.id.xiangqing_bt:
-//                setTextViewJiaCang();
-//                break;
-//            default:
-//                break;
-//        }
+        switch (v.getId()) {
+            case R.id.home_et:
+
+                break;
+            case R.id.home_share:
+                Tools.setToastShow(v.getContext(), "尽情期待！");
+                break;
+            case R.id.bt_girl_more:
+                intent = new Intent(getActivity(), GirlActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.bt_girl_change:
+                Tools.setToastShow(v.getContext(), "尽情期待！");
+                break;
+            case R.id.bt_boy_change:
+                Tools.setToastShow(v.getContext(), "尽情期待！");
+                break;
+            case R.id.bt_boy_more:
+
+                break;
+            case R.id.bt_face_change:
+                Tools.setToastShow(v.getContext(), "尽情期待！");
+                break;
+            case R.id.bt_face_more:
+
+                break;
+            case R.id.bt_taolu_change:
+                Tools.setToastShow(v.getContext(), "尽情期待！");
+                break;
+            case R.id.bt_taolu_more:
+
+                break;
+            case R.id.bt_A_change:
+                Tools.setToastShow(v.getContext(), "尽情期待！");
+                break;
+            case R.id.bt_A_more:
+
+                break;
+            case R.id.ll_girl_one:
+
+                break;
+            default:
+                break;
+        }
 
     }
 
