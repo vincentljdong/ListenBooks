@@ -101,6 +101,9 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         btAMore.setOnClickListener(this);
         btAChange.setOnClickListener(this);
         llGirlOne.setOnClickListener(this);
+        llGirlTwo.setOnClickListener(this);
+        llGirlThree.setOnClickListener(this);
+        llGirlFore.setOnClickListener(this);
     }
 
     private void initData(View view) {
@@ -228,6 +231,15 @@ public class OneFragment extends Fragment implements View.OnClickListener {
 
                 break;
             case R.id.ll_girl_one:
+
+                break;
+            case R.id.ll_girl_two:
+
+                break;
+            case R.id.ll_girl_three:
+
+                break;
+            case R.id.ll_girl_fore:
 
                 break;
             default:
