@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:pv="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-<!--    <ImageView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/splash" />-->
-    <!--    <TextView-->
-    <!--        android:text="@string/splash_text"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"/>-->
-
-
+    <me.wangyuwei.particleview.ParticleView
+        android:id="@+id/particlview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        pv:pv_host_text="老李"
+        pv:pv_particle_text="讲故事"
+        pv:pv_particle_text_size="14sp"
+        pv:pv_text_color="#FFF" />
 
 
 </LinearLayout>
