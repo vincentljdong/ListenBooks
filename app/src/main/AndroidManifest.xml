@@ -28,7 +28,7 @@
         <activity
             android:name="com.jaydon.listenbooks.SplashActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.SplashLauncher">
+            android:theme="@style/AppThemeSplash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
