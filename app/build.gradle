@@ -47,6 +47,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
+    implementation project(':coordinatortablayout')
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.12'
@@ -64,4 +65,5 @@ dependencies {
     implementation 'com.youth.banner:banner:2.1.0'
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+    implementation "com.github.skydoves:transformationlayout:1.1.1"
 }

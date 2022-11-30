@@ -107,7 +107,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initData(View view) {
-        banner.setAdapter(new BannerImageAdapter<DataBean>(DataBean.getTestData3()) {
+        banner.setAdapter(new BannerImageAdapter<DataBean>(DataBean.getBannerData()) {
             @Override
             public void onBindView(BannerImageHolder holder, DataBean data, int position, int size) {
                 Glide.with(holder.itemView)

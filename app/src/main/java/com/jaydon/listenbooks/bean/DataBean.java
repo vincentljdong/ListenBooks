@@ -69,27 +69,27 @@ public class DataBean {
 //        list.add(new DataBean(R.drawable.image11, "生活的态度", 1));
 //        return list;
 //    }
-    public static List<DataBean> getTestData3() {
+    public static List<DataBean> getBannerData() {
         List<DataBean> list = new ArrayList<>();
-        new Thread() {
-            @Override
-            public void run() {
-                super.run();
-                try {
-                    Document doc = Jsoup.connect(StaticValue.HOME_URL_LIUYUETINGSHU).get();
-                    Log.d(StaticValue.TAGS, "initData: " + doc.body());
-
-                    //获取所有图片
-                    Elements imgs = doc.select("img[src]");
-                    for (Element img :
-                            imgs) {
-                        Log.d(StaticValue.TAGS, img.attr("src"));
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-        }.start();
+//        new Thread() {
+//            @Override
+//            public void run() {
+//                super.run();
+//                try {
+//                    Document doc = Jsoup.connect(StaticValue.HOME_URL_LIUYUETINGSHU).get();
+//                    Log.d(StaticValue.TAGS, "initData: " + doc.body());
+//
+//                    //获取所有图片
+//                    Elements imgs = doc.select("img[src]");
+//                    for (Element img :
+//                            imgs) {
+//                        Log.d(StaticValue.TAGS, img.attr("src"));
+//                    }
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }.start();
         list.add(new DataBean("http://www.6yueting.com/img/banner/1.png", null, 1));
         list.add(new DataBean("http://www.6yueting.com/img/banner/2.jpg", null, 1));
         list.add(new DataBean("http://www.6yueting.com/img/banner/4.jpg", null, 1));
