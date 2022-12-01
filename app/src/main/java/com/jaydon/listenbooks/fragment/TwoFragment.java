@@ -74,8 +74,7 @@ public class TwoFragment extends Fragment {
     }
 
     private void loadImages(ImageView imageView, String url) {
-        Glide.with(getActivity()).load(url.trim()
-        ).into(imageView);
+        Glide.with(getActivity()).load(url.trim()).into(imageView);
     }
 
     private void initFragments(View view) {

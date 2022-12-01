@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.jaydon.listenbooks.R;
@@ -39,10 +40,11 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView tv;
+        AppCompatTextView tv;
 
         public MyViewHolder(View view) {
             super(view);
-            tv = (TextView) view.findViewById(R.id.tv_num);
+            tv = view.findViewById(R.id.item_poster_title);
         }
-    }}
+    }
+}

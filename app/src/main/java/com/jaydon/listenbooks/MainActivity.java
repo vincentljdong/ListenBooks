@@ -12,12 +12,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jaydon.listenbooks.adapter.MyViewPageAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.jaydon.listenbooks.utils.Tools;
+import com.skydoves.transformationlayout.TransformationLayout;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener, View.OnClickListener {
 
     public static void setImgTransparent(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -40,12 +44,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     BottomNavigationView navigation;
     ViewPager viewPager;
     TextView mtitle;
+    private FloatingActionButton mFab;
+    private TransformationLayout transformationLayout;
+    private LinearLayout mMenu_card;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setImgTransparent(this);
+//        setImgTransparent(this);
         initView();
         initData();
         initListener();
@@ -57,6 +64,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         navigation.setSelectedItemId(R.id.action_search);
         viewPager.addOnPageChangeListener(this);
         viewPager.setAdapter(new MyViewPageAdapter(getSupportFragmentManager()));
+        mFab.setOnClickListener(this);
+        mMenu_card.setOnClickListener(this);
     }
 
     private void initData() {
@@ -66,6 +75,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         navigation = this.findViewById(R.id.navigation);
         viewPager = this.findViewById(R.id.viewPage);
         mtitle = this.findViewById(R.id.title);
+        mFab = this.findViewById(R.id.fab);
+        transformationLayout = this.findViewById(R.id.transformationLayout);
+        mMenu_card = this.findViewById(R.id.menu_card);
     }
 
     @Override
@@ -115,5 +127,22 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     @Override
     public void onPageScrollStateChanged(int state) {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.fab:
+                //设置开始动画
+                transformationLayout.startTransform();
+                break;
+            case R.id.menu_card:
+                //设置结束动画
+                transformationLayout.finishTransform();
+                Tools.setToastShow(view.getContext(), "Play");
+                break;
+            default:
+                break;
+        }
     }
 }
