@@ -28,7 +28,7 @@ public class TwoFragment extends Fragment {
     private CoordinatorTabLayout mCoordinatorTabLayout;
     private int[] mImageArray, mColorArray;
     private ArrayList<Fragment> mFragments;
-    private final String[] mTitles = {"Android", "iOS", "Web", "Other"};
+    private final String[] mTitles = {"都市言情", "玄幻科幻", "武侠小说", "恐怖惊悚"};
     private ViewPager mViewPager;
     private String imgUrl;
 
@@ -79,14 +79,15 @@ public class TwoFragment extends Fragment {
 
     private void initFragments(View view) {
         mFragments = new ArrayList<>();
-        for (String title : mTitles) {
-            mFragments.add(MainFragment.getInstance(title));
-        }
+//        for (String title : mTitles) {
+//            mFragments.add(MainFragment.getInstance(title));
+//        }
+        mFragments.add(MainFragment.getInstance(""));
     }
 
     private void initViewPager(View view) {
         mViewPager = view.findViewById(R.id.vp);
-        mViewPager.setOffscreenPageLimit(4);
+        mViewPager.setOffscreenPageLimit(mTitles.length);
         mViewPager.setAdapter(new CoordinatorLayoutPagerAdapter(getParentFragmentManager(), mFragments, mTitles));
     }
 }

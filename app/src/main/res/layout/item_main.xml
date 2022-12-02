@@ -26,7 +26,7 @@
             tools:ignore="UnusedAttribute">
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/item_poster_post"
+                android:id="@+id/item_poster_img"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:scaleType="centerCrop"
@@ -45,7 +45,7 @@
                 android:textSize="21sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/item_poster_running_time"
-                app:layout_constraintStart_toEndOf="@id/item_poster_post"
+                app:layout_constraintStart_toEndOf="@id/item_poster_img"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed"
                 tools:text="Zootopia" />
@@ -60,7 +60,7 @@
                 android:textColor="@color/colorRed"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/item_poster_post"
+                app:layout_constraintStart_toEndOf="@id/item_poster_img"
                 app:layout_constraintTop_toBottomOf="@+id/item_poster_title"
                 tools:text="1 h 45 min" />
 

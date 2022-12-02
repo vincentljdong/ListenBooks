@@ -2,6 +2,8 @@ package com.jaydon.listenbooks;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.Activity;
@@ -47,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     private FloatingActionButton mFab;
     private TransformationLayout transformationLayout;
     private LinearLayout mMenu_card;
+    private AppCompatImageView mPrevious;
+    private AppCompatImageView mPause;
+    private AppCompatImageView mNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +71,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         viewPager.setAdapter(new MyViewPageAdapter(getSupportFragmentManager()));
         mFab.setOnClickListener(this);
         mMenu_card.setOnClickListener(this);
+        mPrevious.setOnClickListener(this);
+        mPause.setOnClickListener(this);
+        mNext.setOnClickListener(this);
     }
 
     private void initData() {
@@ -78,6 +86,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         mFab = this.findViewById(R.id.fab);
         transformationLayout = this.findViewById(R.id.transformationLayout);
         mMenu_card = this.findViewById(R.id.menu_card);
+        mPrevious = this.findViewById(R.id.img_previous);
+        mPause = this.findViewById(R.id.img_pause);
+        mNext = this.findViewById(R.id.img_next);
     }
 
     @Override
@@ -136,10 +147,20 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 //设置开始动画
                 transformationLayout.startTransform();
                 break;
-            case R.id.menu_card:
+            case R.id.img_previous:
                 //设置结束动画
                 transformationLayout.finishTransform();
-                Tools.setToastShow(view.getContext(), "Play");
+                Tools.setToastShow(view.getContext(), "previous");
+                break;
+            case R.id.img_pause:
+                //设置结束动画
+                transformationLayout.finishTransform();
+                Tools.setToastShow(view.getContext(), "pause");
+                break;
+            case R.id.img_next:
+                //设置结束动画
+                transformationLayout.finishTransform();
+                Tools.setToastShow(view.getContext(), "next");
                 break;
             default:
                 break;

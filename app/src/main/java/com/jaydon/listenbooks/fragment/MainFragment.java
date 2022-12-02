@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jaydon.listenbooks.R;
 import com.jaydon.listenbooks.adapter.RecyclerAdapter;
+import com.jaydon.listenbooks.bean.DataBean;
 import com.jaydon.listenbooks.utils.Tools;
 import com.skydoves.transformationlayout.TransformationLayout;
 
@@ -33,7 +34,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     public static Fragment getInstance(String title) {
         MainFragment fra = new MainFragment();
         Bundle bundle = new Bundle();
-        bundle.putString(ARG_TITLE, title);
+//        bundle.putString(ARG_TITLE, title);
         fra.setArguments(bundle);
         return fra;
     }
@@ -69,12 +70,12 @@ public class MainFragment extends Fragment implements View.OnClickListener {
 
     private void initData(View v) {
         mDatas = new ArrayList<>();
-        for (int i = 'A'; i < 'z'; i++) {
-            mDatas.add(mTitle + (char) i);
-        }
+//        for (int i = 'A'; i < 'Z'; i++) {
+//            mDatas.add(mTitle + (char) i);
+//        }
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mRecyclerView.getContext()));
-        mRecyclerView.setAdapter(new RecyclerAdapter(mRecyclerView.getContext(), mDatas));
+        mRecyclerView.setAdapter(new RecyclerAdapter(mRecyclerView.getContext(), DataBean.getTestData()));
 
     }
 
