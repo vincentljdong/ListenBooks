@@ -35,7 +35,7 @@ public class DataBean {
 
     public static List<DataBean> getTestData() {
         List<DataBean> list = new ArrayList<>();
-        list.add(new DataBean("http://img.6yueting.com:20001/20200903/2f65ddb3.jpg", "都市言情", 1));
+        list.add(new DataBean("https://img.ting55.com/2018/10/12338.jpg", "都市言情", 1));
         list.add(new DataBean("http://img.6yueting.com:20001/20200903/2f65ddb3.jpg", "玄幻科幻", 3));
         list.add(new DataBean("http://img.6yueting.com:20001/20200903/2f65ddb3.jpg", "武侠小说", 3));
         list.add(new DataBean("http://img.6yueting.com:20001/20200903/2f65ddb3.jpg", "恐怖惊悚", 1));

@@ -66,4 +66,10 @@ public class MyApplication extends Application {
                 //.addHeader("date", "20191030")
                 .into();
     }
+
+
+    /**
+     * 忽略https的证书校验
+     */
+
 }

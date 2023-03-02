@@ -25,14 +25,23 @@
             android:padding="8dp"
             tools:ignore="UnusedAttribute">
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <!--            <com.google.android.material.imageview.ShapeableImageView-->
+            <!--                android:id="@+id/item_poster_img"-->
+            <!--                android:layout_width="64dp"-->
+            <!--                android:layout_height="64dp"-->
+
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent"-->
+            <!--                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />-->
+
+            <ImageView
                 android:id="@+id/item_poster_img"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:scaleType="centerCrop"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent" />
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/item_poster_title"

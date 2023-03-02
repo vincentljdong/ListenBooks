@@ -32,7 +32,8 @@ android {
 //            signingConfig signingConfigs.config
         }
     }
-    buildToolsVersion '31.0.0'
+    buildToolsVersion '33.0.0'
+    namespace 'com.jaydon.listenbooks'
 
     allprojects {
         repositories {

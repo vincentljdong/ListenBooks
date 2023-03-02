@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-37
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-37
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-37
+ADDED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-13
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-13
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-13
 	package
-		ADDED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:11-34
-		INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		ADDED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-13
+		INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-37
+		ADDED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml:1:1-13
 uses-sdk
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-		ADDED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		ADDED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-		ADDED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
-		INJECTED from G:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		ADDED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml
+		INJECTED from F:\AndroidProject\ListenBooks\library\src\main\AndroidManifest.xml

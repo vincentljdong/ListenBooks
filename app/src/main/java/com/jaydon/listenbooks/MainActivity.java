@@ -20,6 +20,7 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.jaydon.listenbooks.adapter.MyViewPageAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.jaydon.listenbooks.mediaplayer.MediaPlayerHelper;
 import com.jaydon.listenbooks.utils.Tools;
 import com.skydoves.transformationlayout.TransformationLayout;
 
@@ -156,6 +157,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 //设置结束动画
                 transformationLayout.finishTransform();
                 Tools.setToastShow(view.getContext(), "pause");
+                MediaPlayerHelper.getInstance().playUrl(this,"https://aod.cos.tx.xmcdn.com/group74/M06/3C/21/wKgO0l6NKBDx07hLACidv6Vk6HI068.m4a",false);
                 break;
             case R.id.img_next:
                 //设置结束动画

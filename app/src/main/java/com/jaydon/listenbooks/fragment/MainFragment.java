@@ -34,7 +34,7 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     public static Fragment getInstance(String title) {
         MainFragment fra = new MainFragment();
         Bundle bundle = new Bundle();
-//        bundle.putString(ARG_TITLE, title);
+        bundle.putString(ARG_TITLE, title);
         fra.setArguments(bundle);
         return fra;
     }
@@ -69,10 +69,6 @@ public class MainFragment extends Fragment implements View.OnClickListener {
     }
 
     private void initData(View v) {
-        mDatas = new ArrayList<>();
-//        for (int i = 'A'; i < 'Z'; i++) {
-//            mDatas.add(mTitle + (char) i);
-//        }
 
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mRecyclerView.getContext()));
         mRecyclerView.setAdapter(new RecyclerAdapter(mRecyclerView.getContext(), DataBean.getTestData()));

@@ -16,8 +16,10 @@ import com.bumptech.glide.Glide;
 import com.google.android.material.tabs.TabLayout;
 import com.jaydon.listenbooks.R;
 import com.jaydon.listenbooks.adapter.CoordinatorLayoutPagerAdapter;
+import com.jaydon.listenbooks.bean.DataBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import cn.hugeterry.coordinatortablayout.CoordinatorTabLayout;
 import cn.hugeterry.coordinatortablayout.listener.LoadHeaderImagesListener;
@@ -31,6 +33,7 @@ public class TwoFragment extends Fragment {
     private final String[] mTitles = {"都市言情", "玄幻科幻", "武侠小说", "恐怖惊悚"};
     private ViewPager mViewPager;
     private String imgUrl;
+    List<DataBean> mDataBean;
 
     @Nullable
     @Override
@@ -79,10 +82,9 @@ public class TwoFragment extends Fragment {
 
     private void initFragments(View view) {
         mFragments = new ArrayList<>();
-//        for (String title : mTitles) {
-//            mFragments.add(MainFragment.getInstance(title));
-//        }
-        mFragments.add(MainFragment.getInstance(""));
+        for (String title : mTitles) {
+            mFragments.add(MainFragment.getInstance(title));
+        }
     }
 
     private void initViewPager(View view) {

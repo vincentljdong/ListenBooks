@@ -12,12 +12,17 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
         sourceCompatibility JavaVersion.VERSION_1_8
     }
-
     packagingOptions {
-        // 剔除这个包下的所有文件（不会移除签名信息）
-        exclude 'META-INF/*******'
+        jniLibs {
+            excludes += ['META-INF/*******']
+        }
+        resources {
+            excludes += ['META-INF/*******']
+        }
     }
-    buildToolsVersion '31.0.0'
+
+    buildToolsVersion '33.0.0'
+    namespace 'com.demo.http'
 
 
     android.libraryVariants.all { variant ->
